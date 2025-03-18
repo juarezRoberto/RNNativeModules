@@ -1,0 +1,184 @@
+<resources>
+
+    <!-- common-->
+    <string name="zemt_my_talents">Mis talentos</string>
+    <string name="zemt_next">Siguiente</string>
+    <string name="zemt_discover">Descubre</string>
+    <string name="zemt_discover_talents">Descubre tus talentos</string>
+    <string name="zemt_discover_talents_v2">Descubrir talentos</string>
+    <string name="zemt_introduction">Introduction</string>
+    <string name="zemt_home">Home</string>
+    <string name="zemt_tutorial">Tutorial</string>
+    <string name="zemt_welcome_title">¡Es hora de descubrir tus talentos!</string>
+    <string name="zemt_welcome_message">Comienza a identificar tus talentos, prepárate para el siguiente nivel, enriquece tu puesto de trabajo y aprovecha al máximo tus habilidades con lo que mejor sabes hacer.</string>
+    <string name="zemt_welcome_incentive_message">La sabiduría te premiará…</string>
+    <string name="zemt_continue">Continuar</string>
+    <string name="zemt_start">Comenzar</string>
+    <string name="zemt_go_back">Regresar</string>
+    <string name="zemt_ok">Entendido</string>
+    <string name="zemt_module_desc">Descubre tus fortalezas y lleva al máximo tu potencial</string>
+    <string name="zemt_module_discover">Descubre tus talentos</string>
+    <string name="zemt_module_confirm">Confirma tus talentos</string>
+    <string name="zemt_confirm">Confirma</string>
+    <string name="zemt_apply">Aplica</string>
+    <string name="zemt_module_apply">Aplica tus talentos</string>
+    <string name="zemt_skip">skip</string>
+    <string name="zemt_advice_title">Antes de comenzar</string>
+    <string name="zemt_advice_wifi">Conéctate a una red Wi-Fi con buena señal de internet.</string>
+    <string name="zemt_advice_be_patience">Ten paciencia, el cuestionario es un poco largo pero elevarás tu nivel profesional.</string>
+    <string name="zemt_advice_exit_warning">Si te sales de la actividad antes de terminar, podrás regresar exactamente al punto donde te quedaste.</string>
+    <string name="zemt_progress">Progreso:</string>
+    <string name="zemt_start_to_confirm">Empezar a confirmar</string>
+    <string name="zemt_apply_talents">Aplicar talentos</string>
+    <string name="zemt_greeting_user">¡Hola %s!</string>
+    <string name="zemt_total_results">Resultados (%s)</string>
+    <string name="zemt_talent_menu_info_school">Aquí veras toda la información sobre tus talentos y los talentos de tus estudiantes, así como las conversaciones y los acuerdos generados.</string>
+    <string name="zemt_talent_menu_info_company">Aquí veras toda la información sobre tus talentos y los talentos de tu equipo, así como las conversaciones y los acuerdos generados.</string>
+    <string name="zemt_talent_menu_converstions">Conversaciones</string>
+    <string name="zemt_talent_menu_collaborators">Colaboradores</string>
+    <string name="zemt_talent_menu_converstion_types">Tipos de conversaciones</string>
+    <string name="zemt_talent_menu_conversations_button">Conversaciones disponibles</string>
+    <string name="zemt_collaborator_detail_talent_section_talent_title">Talentos</string>
+    <string name="zemt_collaborator_detail_talent_section_talent_item">Dominantes y no dominantes</string>
+    <string name="zemt_collaborator_detail_talent_section_conversation_record_title">Historial de conversaciones</string>
+    <string name="zemt_collaborator_detail_talent_section_conversation_record_item0">Fijar objetivos"</string>
+    <string name="zemt_collaborator_detail_talent_section_conversation_record_item1">Conexión rápida</string>
+    <string name="zemt_collaborator_detail_talent_section_conversation_record_item2">Chequeo</string>
+    <string name="zemt_collaborator_detail_talent_section_conversation_record_item3">Desempeño</string>
+    <string name="zemt_collaborator_detail_talent_section_conversation_record_item4">Desarrollo</string>
+    <string name="zemt_collaborator_detail_talent_section_phrase_record_item0">Pregúntale por alguien que haya conocido recientemente."</string>
+    <string name="zemt_collaborator_detail_talent_section_phrase_record_item1">Pídele que te platique acerca de experiencias donde conocer a gente nueva haya abierto alguna nueva oportunidad.</string>
+    <string name="zemt_collaborator_detail_talent_section_phrase_record_item2">Pregúntale que tan importante es para el/ella contar con amigos para toda la vida.</string>
+    <string name="zemt_collaborator_detail_talent_section_phrase_record_item3">Pídele que te platique acerca de cómo le hace para profundizar su relación con alguna persona.</string>
+    <string name="zemt_tip_title">Tip Zeus</string>
+    <string name="zemt_tip_info">Generar estas conversaciones con tus colaboradores te ayudara a conocerlos, saber que los motiva y crear equipos de alto rendimiento. </string>
+    <string name="zemt_tip_question">¿Sabes para que sirven las <b>conversaciones</b>?</string>
+    <string name="zemt_tip_1">Cómo formador te ayudara a conocer a tus colaboradores. Creando vínculos a través de preguntas sencillas pero enriquecedoras.</string>
+    <string name="zemt_tip_2">Fijamos expectativas realistas y correctas de cada uno, conociendo ahora sus motivaciones y su forma de actuar y resolver problemas.</string>
+    <string name="zemt_tip_3">Ahora que ya lo sabes, genera una conversación y empieza a crear equipos de alto rendimiento. </string>
+    <string name="zemt_tip_exit">Salir</string>
+    <string name="zemt_tip2_title">Tip Zeus</string>
+    <string name="zemt_tip2_info">¿Sabes para que sirven el <b>historial de conversaciones</b>?</string>
+    <string name="zemt_tip2_1">Te permite consultar y recordar las interacciones previas, ayudándote a dar seguimiento a los acuerdos generados con tu formador.</string>
+    <string name="zemt_conversations_advice">Selecciona un colaborador para ver más detalles sobre sus talentos y conversaciones.</string>
+    <string name="zemt_error_title">¡Ops! Algo pasó</string>
+    <string name="zemt_error_description">No se puede completar el proceso correctamente. Inténtalo de nuevo.</string>
+    <string name="zemt_accept">Aceptar</string>
+    <string name="zemt_congratulations">¡Felicidades!</string>
+    <string name="zemt_five_talents_discovered">Has descubierto tus 5 talentos</string>
+    <string name="zemt_attention">¡Atención!</string>
+    <string name="zemt_max_number_neutral_answers">Para asegurar que tus resultados sean precisos, te sugerimos seleccionar otra opción diferente a neutral.</string>
+    <string name="zemt_are_you_sure_want_to_leave_title">¿Esta seguro de salir?</string>
+    <string name="zemt_are_you_sure_want_to_leave_description">Sí sales ahora, tu progreso se guardará. Cuando regreses podrás retomar el test desde donde te quedaste.</string>
+    <string name="zemt_are_you_sure_want_to_leave_survey_apply">Sí sales ahora, tu progreso se guardará. Cuando regreses podrás retomar el test desde donde te quedaste.</string>
+    <string name="zemt_leave">Sí, salir</string>
+    <string name="zemt_cancel">Cancelar</string>
+    <string name="zemt_finish">Finalizar</string>
+    <string name="zemt_comments">Comentarios</string>
+    <string name="zemt_complete_discover_test_title">Completa el test de “Mis talentos”</string>
+    <string name="zemt_complete_discover_test_description">Recuerda que puedes continuar desde donde te quedaste.</string>
+    <string name="zemt_confirm_start_text">¿Y ahora qué sigue?</string>
+    <string name="zemt_confirm_text_description">Descubrir tus talentos fue el primer paso hacia la grandeza... Si realmente los mereces, tendrás que confirmarlo desbloqueando cada uno.</string>
+    <string name="zemt_dominant_no_dominant_talents">Talentos dominantes y no dominantes</string>
+    <string name="zemt_dominant_talents">Dominantes</string>
+    <string name="zemt_no_dominant_talents">No dominantes</string>
+    <string name="zemt_user_profile_instructions">Toca los botones alrededor del círculo central para conocer los talentos dominantes de <b>%s</b>.</string>
+    <string name="zemt_save_point_title">Punto de guardado</string>
+    <string name="zemt_save_point_description">Puedes continuar con el test desde aquí. Recuerda que no existen respuestas buenas o malas.</string>
+    <string name="zemt_confirm_save_point_description">Puedes seguir confirmando tus talentos desde aquí. Recuerda que no existen respuestas buenas o malas.</string>
+    <string name="zemt_apply_save_point_description">Puedes seguir aplicando tus talentos desde aquí. Recuerda que no existen respuestas buenas o malas.</string>
+    <string name="zemt_first_time_survey_discover_title">¡Todo listo!</string>
+
+    <string name="zemt_take_break_title">¡Tómate un descanso!</string>
+    <string name="zemt_take_break_description">Toma %1$s para despejarte.\nDespués, continua con el test con más energía. ¡Tú puedes!</string>
+    <string name="zemt_take_break_time">5 minutos</string>
+    <string name="zemt_take_break_positive_button">Tomar descanso</string>
+    <string name="zemt_take_break_negative_button">Continuar con el test</string>
+
+    <string name="zemt_first_time_survey_discover_description">Cada actividad dura 30 seg y contiene 2 frases, selecciona la frase que más te identifique utilizando los emojis de abajo.</string>
+    <string name="zemt_see_more_talents">Ver más talentos</string>
+    <string name="zemt_answer">Responder</string>
+    <string name="zemt_you_are_in_the_end_of_the_survey">¡Llegaste al final de esta etapa!</string>
+    <string name="zemt_you_are_in_the_end_of_the_confirm_survey">Continúa para confirmar tus respuestas e iniciar la última etapa.\n\n También puedes cancelar si quieres cambiar tus respuestas.</string>
+    <string name="zemt_confirm_answers_or_cancel">Continúa para confirmar tus respuestas o cancela para cambiarlas.</string>
+    <string name="zemt_talent_applied_title">¡Has demostrado que tienes un talento %1$s!</string>
+    <string name="zemt_talent_applied_description">Solo faltan %1$d talentos por aplicar</string>
+    <string name="zemt_talent_applied_description_one">Solo falta 1 talento por aplicar</string>
+    <string name="zemt_talent_apply_finished_title">¡Has llegado al final de esta aventura! (por ahora)</string>
+    <string name="zemt_talent_apply_finished_description">Llegó el momento de conocer tus talentos dominantes</string>
+    <string name="zemt_excellent_job">¡Excelente trabajo!</string>
+    <string name="zemt_talent_final_talents_description">Has demostrado merecer tus %d talentos dominantes</string>
+
+    <array name="zemt_yes_no_options">
+        <item>Si</item>
+        <item>No</item>
+    </array>
+
+    <!-- QR -->
+    <string name="zemt_qr_title">Comparte tu código QR con tu formador para que puedan finalizar la conversación.</string>
+    <string name="zemt_qr_date">Vigencia: %1$s</string>
+    <string name="zemt_qr_share">Compartir en</string>
+    <string name="zemt_qr_scan">Escanea un código QR de Zeus</string>
+    <string name="zemt_qr_not_valid">No se detectó ningún QR válido</string>
+    <string name="zemt_qr_error_message">La acción no se pudo completar correctamente. Inténtalo de nuevo.</string>
+    <string name="zemt_empty"></string>
+    <string name="zemt_conversationFinished">Conversación finalizada con éxito.\nRecuerda dar un seguimiento constante a los acuerdos y comentarios generados.</string>
+
+    <!-- Conversations -->
+    <string name="zemt_conversation_history_not_realized_title">No realizada</string>
+    <string name="zemt_conversation_history_not_realized_messsage">No te preocupes sí no la pudiste realizar, siempre hay tiempo para crear nuevas conversaciones.</string>
+    <string name="zemt_conversation_empty_title">¡Parece que aún no hay nada por aquí!</string>
+    <string name="zemt_conversation_empty_message">Pídele a tu líder que inicien una conversación y construyan su historial de conversaciones.</string>
+    <string name="zemt_dialog_message_remind_talent_test">%s aún no realiza el test de “Mis talentos”</string>
+    <string name="zemt_dialog_button_remind_talent_test">Enviar recordatorio</string>
+
+    <string name="zemt_dialog_title_saved_progress">Progreso guardado</string>
+    <string name="zemt_dialog_message_continue_conversation">Continua la conversación desde donde te quedaste o empieza de nuevo</string>
+    <string name="zemt_dialog_positive_button_continue">Continuar conversación</string>
+    <string name="zemt_dialog_negative_button_cancel">Empezar de nuevo</string>
+    <string name="zemt_conversations_start">Iniciar conversación</string>
+    <string name="zemt_conversations_choose">Elige una conversación</string>
+    <string name="zemt_conversations_time_to_start">¡Es momento de comenzar!</string>
+    <string name="zemt_home_apply_description_1">A continuación te mostraremos diferentes frases relacionadas a cada talento. Indica con cuáles te identificas o no.\n\n Al terminar desbloquearás tus talentos y conocerás los secretos que esconden.</string>
+    <string name="zemt_home_apply_description_2">En esta última etapa te mostraremos varias frases relacionadas a cada talento. Indica con cuáles te identificas o no.\n\n Al terminar desbloquearás tus talentos y conocerás los secretos que esconden.</string>
+    <string name="zemt_is_time_to_apply_your_talents">¡Es hora de aplicar tus talentos!</string>
+    <string name="zemt_more_talents">Más talentos</string>
+    <string name="zemt_home_discover_description">Toca el siguiente cuadro para continuar con el test de “Mis talentos”.</string>
+    <string name="zemt_known_them">¡Conócelos!</string>
+    <string name="zemt_phrase_choose">Elige una frase</string>
+    <string name="zemt_phrase_information">Esta frase la utilizaras para realizar la conversación con tu colaborador.</string>
+    <string name="zemt_conversations_onboarding_title">¡Te damos la bienvenida!</string>
+    <string name="zemt_conversations_onboarding_message">
+        Aquí podrás iniciar las conversaciones con tus colaboradores. Este es un espacio para conocerlos mejor y Potenciar sus talentos.\n\nRecuerda que las conversaciones pueden ser de manera presencial o remota.
+    </string>
+    <string name="zemt_conversations_conversation_title">Inicia una conversación</string>
+    <string name="zemt_conversations_conversation_message">1. Selecciona a un colaborador.\n\n2. Elige un tipo conversación.\n\n3. Después elige una frase (estas frases se mostraran de acuerdo a los talentos de tu colaborador).</string>
+    <string name="zemt_conversations_qr_title">Código QR</string>
+    <string name="zemt_conversations_qr_message">
+        · Antes de finalizar una conversación es importante que tu colaborador tenga a la mano su QR para validar que la conversación se llevo a cabo.\n\n
+        · Este QR se encuentra en su app, dentro de el modulo de “Mis talentos” en la parte superior derecha (icono de QR).
+    </string>
+    <string name="zemt_conversations_make_conversation_title">Realiza la conversación</string>
+    <string name="zemt_conversations_make_conversation_is_done">Realizaste la conversación</string>
+    <string name="zemt_conversations_use_phrase">Utiliza la siguiente frase</string>
+    <string name="zemt_these_are_the_questions">Ahí te van las preguntas</string>
+    <string name="zemt_remember_there_are_no_wrog_or_correct_answers">Recuerda que no hay respuestas correctas ni incorrectas</string>
+    <string name="zemt_you_have_above_talent">Tienes un talento %s</string>
+    <string name="zemt_solve_the_puzzles_hidden_for_you">Resuelve los acertijos que esconde para ti...</string>
+    <string name="zemt_good_job_remaining_talents">¡Buen trabajo!\n Solo faltan %d talentos más...</string>
+    <string name="zemt_one_talent_more">¡Ya casi terminas!\nSolo falta 1 talento más...</string>
+    <string name="zemt_two_talent_more">¡No te detengas!\nSolo faltan 2 talentos más...</string>
+    <string name="zemt_three_talent_more">¡Vas muy bien!\nSolo faltan 3 talentos más...</string>
+    <string name="zemt_conversations_finish_conversation">Finaliza la conversación</string>
+    <string name="zemt_conversations_thank_collaborator">Agradece a tu colaborador por el tiempo dedicado y recuerda pedirle su QR para finalizar.</string>
+    <string name="zemt_conversations_used_phrase">Frase utilizada:</string>
+    <string name="zemt_conversations_mandatory_comments">Comentarios (Obligatorio)</string>
+    <string name="zemt_conversations_characters_limit">Carácteres máximos</string>
+    <string name="zemt_conversations_choose_collaborator">Selecciona un colaborador</string>
+    <string name="zemt_conversations_touch_conversation_for_more_info">Toca alguna de las siguientes conversaciones para ver más información.</string>
+    <string name="zemt_click_buttons_on_talents_profile_to_show_detail">Toca los botones alrededor del círculo central para conocer tus talentos dominantes.</string>
+    <string name="zemt_finished_apply_talents_description_1">Has demostrado merecer tus %d talentos dominantes</string>
+    <string name="zemt_finished_apply_talents_description_2">Ahora podrás conocer de lo que eres capaz tocando cada talento para ver sus significados y ponerlos en práctica.</string>
+    <string name="zemt_talents_dominant_more_info_description">Toca los botones alrededor del círculo central para conocer de qué van tus talentos dominantes.</string>
+    <string name="zemt_search">Buscar</string>
+</resources>

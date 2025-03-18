@@ -1,0 +1,101 @@
+apply from: "$rootProject.projectDir/buildsystem/library.gradle"
+
+android {
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    kotlin {
+        jvmToolchain(17)
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    packagingOptions {
+        pickFirst "META-INF/proguard/androidx-annotations.pro"
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    coreLibraryDesugaring libraries.javaBackwardApiCompat
+
+    implementation libraries.androidxAppCompat
+    implementation libraries.androidxConstraint
+    implementation libraries.androidxCore
+    implementation libraries.androidxCoreKtx
+    implementation libraries.androidMaterial
+    implementation libraries.androidxMultidex
+    implementation libraries.activityKtx
+    implementation libraries.fragmentKtx
+    implementation libraries.lifecycleRuntime
+    implementation libraries.lifecycleViewModel
+    implementation libraries.navigationFragmentKtx
+    implementation libraries.navigationUi
+    implementation libraries.recyclerView
+    implementation libraries.viewpager2
+    implementation libraries.paging3
+    implementation libraries.swipeRefreshLayout
+
+    implementation libraries.glide
+    implementation libraries.glideOkHttp3Integration
+    ksp libraries.glideCompiler
+
+    implementation libraries.okhttp3
+    implementation libraries.retrofit2
+    implementation libraries.retrofit2ConverterGson
+    implementation libraries.ktorCore
+    implementation libraries.ktorClient
+
+    implementation libraries.coroutines
+    implementation libraries.coroutinesPlayServices
+
+    implementation libraries.facebookShimmer
+    implementation libraries.gson
+
+    testImplementation libraries.testImplJunit
+    androidTestImplementation libraries.androidxTestJunit
+    androidTestImplementation libraries.androidxTestEspresso
+    testImplementation libraries.mockk
+
+    // Added to resolve transitive dependencies from zcsessioninfo
+    implementation libraries.sqlCipher
+    implementation libraries.room
+    implementation libraries.roomKtx
+    implementation libraries.roomPaging
+    ksp libraries.roomCompiler
+
+    // Added to resolve transitive dependencies from zceventscollector
+    implementation platform("${libraries.firebaseBom}")
+    implementation libraries.firebaseFirestoreKtx
+    implementation libraries.workRuntime
+    implementation libraries.workRuntimeKtx
+
+    // Added to resolve transitive dependency from zcommonutils
+    implementation libraries.lottie
+    implementation libraries.exoplayerUi
+
+    // Base zeus core dependencies
+    implementation zeusLibrary.zcdesignsystem
+    implementation zeusLibrary.zcsessioninfo
+    implementation zeusLibrary.zccommon
+    implementation zeusLibrary.zcinterceptor
+    implementation zeusLibrary.zcservicecoordinator
+    implementation zeusLibrary.keyManager
+    implementation zeusLibrary.zceventcollector
+}

@@ -1,0 +1,31 @@
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'kotlin-kapt'
+
+if (getGradle().getStartParameter().getTaskRequests().toString().contains("hms")) {
+    apply plugin: 'com.huawei.agconnect'
+}
+
+android {
+
+    flavorDimensions "service"
+    productFlavors {
+        gms {
+            dimension "service"
+            buildConfigField "String", "SERVICE_USED", '"gms"'
+        }
+        hms {
+            dimension "service"
+            buildConfigField "String", "SERVICE_USED", '"hms"'
+        }
+    }
+
+    sourceSets {
+        gms { java.srcDirs('src/gms/java') }
+        hms { java.srcDirs('src/hms/java') }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+}

@@ -1,0 +1,230 @@
+{
+  "data": {
+    "talents": [
+      {
+        "description": "Expresa una serie de capacidades innatas para lograr lo que te propongas. El triunfo lo es todo para ti. La necesidad de elevarte como ganador te lleva constantemente a compararte con los demás, con su desempeño, con cualquier indicio que te permita ubicarte y saber en qué lugar estás.\n\nCuando no tienes información acerca de tu ubicación, inmediatamente algo se enciende hacia la búsqueda de una solución que te lleve al primer lugar.",
+        "id": 5,
+        "name": "Competidor",
+        "questions": [
+          {
+            "answer_options": [
+              {
+                "id": 27904,
+                "order": 0,
+                "text": "Sé responsable de impulsar a tu equipo a ganar.",
+                "value": 0
+              },
+              {
+                "id": 27905,
+                "order": 1,
+                "text": "Comunica qué es lo importante para triunfar.",
+                "value": 0
+              },
+              {
+                "id": 27906,
+                "order": 2,
+                "text": "Identifica cómo se compara tu equipo con los competidores.",
+                "value": 0
+              },
+              {
+                "id": 27907,
+                "order": 3,
+                "text": "Reta a tus compañeros a ganar en la ejecución de las metas.",
+                "value": 0
+              },
+              {
+                "id": 27908,
+                "order": 4,
+                "text": "Identifica cómo se puede ahorrar tiempo para ganarle a los demás.",
+                "value": 0
+              }
+            ],
+            "id": 13411,
+            "order": 1,
+            "text": "¿Te gusta esta actividad?"
+          }
+        ]
+      },
+      {
+        "description": "Es una predisposición natural que tú posees para reconstruir \"cómo fue que llegamos aquí\", y que te lleva a explicar el pasado a través de eventos, datos, personas y situaciones que en conjunto explican la historia.\n\nSabes encontrar vínculos en el pasado que explican nuestro presente.",
+        "id": 8,
+        "name": "Articulador",
+        "questions": [
+          {
+            "answer_options": [
+              {
+                "id": 27935,
+                "order": 0,
+                "text": "Vuélvete experto en saber por qué los clientes nos prefieren.",
+                "value": 0
+              },
+              {
+                "id": 27937,
+                "order": 1,
+                "text": "Identifica qué es lo que aumenta las ventas.",
+                "value": 0
+              },
+              {
+                "id": 27939,
+                "order": 2,
+                "text": "Sé la persona que investiga cómo fue que ocurrieron los hechos.",
+                "value": 0
+              },
+              {
+                "id": 27941,
+                "order": 3,
+                "text": "Identifica qué es lo que hace que nuestros clientes regresen.",
+                "value": 0
+              },
+              {
+                "id": 27943,
+                "order": 4,
+                "text": "Observa qué hacen otros equipos para ejecutar mejor sus tareas.",
+                "value": 0
+              }
+            ],
+            "id": 13417,
+            "order": 1,
+            "text": "¿Te gusta esta actividad?"
+          }
+        ]
+      },
+      {
+        "description": "Expresa una predisposición natural hacia el trabajo. Te dedicas a largas horas en cada jornada y no es raro que cada semana te llenes con más horas de trabajo de las normales.\n\nSientes la necesidad de sentirte ocupado y esa exigencia te lleva a trabajar mucho más que los demás, inclusive durante los fines de semana.\n\nCada día empieza desde cero y hay que llenarlo de contenido con logros, aunque sean pequeños, pero que te dejen satisfecho con haber realizado y obtenido resultados concretos, visibles y valiosos.",
+        "id": 13,
+        "name": "Conquistador",
+        "questions": [
+          {
+            "answer_options": [
+              {
+                "id": 27856,
+                "order": 0,
+                "text": "Se responsable de lograr las metas importantes de tu equipo",
+                "value": 0
+              },
+              {
+                "id": 27857,
+                "order": 1,
+                "text": "Haz que tu equipo sea reconocido por lograr sus metas.",
+                "value": 0
+              },
+              {
+                "id": 27859,
+                "order": 2,
+                "text": "Haz que tu dedicación al trabajo sea reconocida por los demás.",
+                "value": 0
+              },
+              {
+                "id": 27862,
+                "order": 3,
+                "text": "Ayuda a que tu equipo valore la dedicación al trabajo.",
+                "value": 0
+              },
+              {
+                "id": 27865,
+                "order": 4,
+                "text": "Fija metas alcanzables cada día y  hazlas realidad.",
+                "value": 0
+              }
+            ],
+            "id": 13396,
+            "order": 1,
+            "text": "¿Te gusta esta actividad?"
+          }
+        ]
+      },
+      {
+        "description": "Muestra tus habilidades hacia el cuestionamiento. En tu mente las cosas suceden por alguna razón y es necesario conocer con exactitud cuál es la causa de lo que sucede, verificar que la información sea precisa y verdadera, para asegurar que las cosas \"cuadren\".\n\nTienes el don de notar inconsistencias en datos y presentaciones, los cuales deben ser corregidos con precisión para que tengan sustento.",
+        "id": 1,
+        "name": "Examinador",
+        "questions": [
+          {
+            "answer_options": [
+              {
+                "id": 27959,
+                "order": 0,
+                "text": "Cuestiona la validez de los datos para tomar decisiones.",
+                "value": 0
+              },
+              {
+                "id": 27960,
+                "order": 1,
+                "text": "Verifica que la información de tu equipo sea exacta y confiable.",
+                "value": 0
+              },
+              {
+                "id": 27961,
+                "order": 2,
+                "text": "Identifica por qué las cosas sí funcionan y por qué no.",
+                "value": 0
+              },
+              {
+                "id": 27962,
+                "order": 3,
+                "text": "Identifica cómo mejorar el trabajo de equipo.",
+                "value": 0
+              },
+              {
+                "id": 27963,
+                "order": 4,
+                "text": "Determina cómo mejorar la calidad de servicio a clientes.",
+                "value": 0
+              }
+            ],
+            "id": 13422,
+            "order": 1,
+            "text": "¿Te gusta esta actividad?"
+          }
+        ]
+      },
+      {
+        "description": "Muestra que tú tienes habilidades para iniciar rápidamente relaciones con personas desconocidas, para \"romper el hielo\" y conocer a los demás fácilmente, para transformar un encuentro casual en un contacto real y valioso, para múltiples fines, tanto de amistad como para eventuales oportunidades de negocio.\n\nNunca te quedas sin palabras. Un saludo, un acercamiento, un \"hola\" salen de tu boca con facilidad. \n\nTe gusta ganarte a los demás y disfrutas cada nuevo encuentro. Para ti no hay desconocidos, sino personas por conocer.",
+        "id": 4,
+        "name": "Encanto",
+        "questions": [
+          {
+            "answer_options": [
+              {
+                "id": 27889,
+                "order": 0,
+                "text": "Sé responsable de expandir la red de contactos.",
+                "value": 0
+              },
+              {
+                "id": 27890,
+                "order": 1,
+                "text": "Descubre prospectos que pueden convertirse en clientes.",
+                "value": 0
+              },
+              {
+                "id": 27891,
+                "order": 2,
+                "text": "Organiza reuniones o eventos con clientes potenciales.",
+                "value": 0
+              },
+              {
+                "id": 27892,
+                "order": 3,
+                "text": "Invita a desconocidos a conocer tus productos y servicios.",
+                "value": 0
+              },
+              {
+                "id": 27893,
+                "order": 4,
+                "text": "Sé promotor de tus productos y servicios.",
+                "value": 0
+              }
+            ],
+            "id": 13408,
+            "order": 1,
+            "text": "¿Te gusta esta actividad?"
+          }
+        ]
+      }
+    ]
+  },
+  "httpCode": 200,
+  "message": "The request was successful and the server returned the requested data.",
+  "requestId": "430c0020-bfa7-42ea-b02f-20925f358a7f",
+  "status": "SUCCESS"
+}

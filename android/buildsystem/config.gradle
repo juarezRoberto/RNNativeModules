@@ -1,0 +1,37 @@
+ext.configuration = [
+        applicationId       : "com.upax.zemytalents",
+        appnamespace        : "com.upax.zeus",
+        sdknamespace        : "com.upax.zemytalents",
+        versionMajor        : 1,
+        versionMinor        : 2,
+        versionPatch        : 1,
+        internalVersionMajor: 1,
+        internalVersionMinor: 2,
+        internalVersionPatch: 1,
+        versionClassifier   : "",
+        minSdk              : 24,
+        compileSdk          : 35,
+        targetSdk           : 34,
+        buildTools          : "34.0.0",
+        ndkVersion          : "27.0.12077973",
+]
+
+def configuration = ext.configuration
+
+ext.buildVersionCode = {
+    return configuration.versionMajor + configuration.versionMinor + configuration.versionPatch
+}
+
+ext.buildVersionName = {
+    String versionName = configuration.internalVersionMajor + "." + configuration.internalVersionMinor + "." + configuration.internalVersionPatch
+    if (configuration.versionClassifier != null && !configuration.versionClassifier.isEmpty()) {
+        versionName = versionName + "-" + configuration.versionClassifier
+    }
+    return versionName
+}
+
+ext.jfrogConfig = [
+        projectName   : "zemytalents",
+        groupId       : "com.upax.zeus.nuevo.android.sdk",
+        publishFlavors: true
+]

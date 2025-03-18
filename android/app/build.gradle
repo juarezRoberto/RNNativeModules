@@ -1,6 +1,22 @@
-apply plugin: "com.android.application"
-apply plugin: "org.jetbrains.kotlin.android"
-apply plugin: "com.facebook.react"
+//apply plugin: "com.android.application"
+//apply plugin: "org.jetbrains.kotlin.android"
+//apply plugin: "com.facebook.react"
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.facebook.react'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.devtools.ksp'
+    id 'org.jetbrains.kotlin.plugin.compose'
+}
+
+apply from: "$rootProject.projectDir/buildsystem/config.gradle"
+apply from: "$rootProject.projectDir/buildsystem/flavorsbuild.gradle"
+apply from: "$rootProject.projectDir/buildsystem/basedependencies.gradle"
+apply from: "$rootProject.projectDir/buildsystem/library.gradle"
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -74,29 +90,34 @@ def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
 
 android {
     ndkVersion rootProject.ext.ndkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
-    compileSdk rootProject.ext.compileSdkVersion
-
+//    buildToolsVersion rootProject.ext.buildToolsVersion
+//    compileSdk rootProject.ext.compileSdkVersion
     namespace "com.awesomeproject"
+    compileSdk 35
+
+//    namespace "com.awesomeproject"
     defaultConfig {
-        applicationId "com.awesomeproject"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+//        applicationId "com.awesomeproject"
+        minSdkVersion 24
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
+
+        vectorDrawables.useSupportLibrary true
+        multiDexEnabled true
     }
-    signingConfigs {
-        debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-        }
-    }
+//    signingConfigs {
+//        debug {
+//            storeFile file('debug.keystore')
+//            storePassword 'android'
+//            keyAlias 'androiddebugkey'
+//            keyPassword 'android'
+//        }
+//    }
     buildTypes {
-        debug {
-            signingConfig signingConfigs.debug
-        }
+//        debug {
+//            signingConfig signingConfigs.debug
+//        }
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
@@ -105,15 +126,115 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    sourceSets {
+//        prod { java.srcDirs('src/prod/java') }
+//        qa { java.srcDirs('src/qa/java') }
+        dev { java.srcDirs('src/dev/java') }
+    }
+
+    flavorDimensions "version", "service"
+    productFlavors {
+        dev {
+            applicationId "com.awesomeproject" + ".dev"
+            dimension "version"
+            versionNameSuffix "-dev"
+            externalNativeBuild {
+                cmake {
+                    arguments "-DVERSION=dev"
+                }
+            }
+        }
+//        qa {
+//            applicationId configuration.applicationId + ".qa"
+//            dimension "version"
+//            versionNameSuffix "-qa"
+//            externalNativeBuild {
+//                cmake {
+//                    arguments "-DVERSION=qa"
+//                }
+//            }
+//        }
+//        prod {
+//            applicationId configuration.applicationId
+//            dimension "version"
+//            versionNameSuffix "-prod"
+//            externalNativeBuild {
+//                cmake {
+//                    arguments "-DVERSION=prod"
+//                }
+//            }
+//        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    packagingOptions {
+        pickFirst "META-INF/proguard/androidx-annotations.pro"
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
+
+    /**
+     * Room config to export db schemas
+     */
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+                arguments["room.incremental"] = "true"
+            }
+        }
+    }
+    sourceSets {
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+    }
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = classpathBase.kotlinCompiler
+    }
 }
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
+    implementation project(':mylib')
+    gmsImplementation project(':zemytalents')
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
         implementation jscFlavor
     }
+
+    implementation platform("${libraries.composeBom}")
+    implementation libraries.composeUi
+    implementation libraries.activityCompose
+    implementation libraries.composeUiGraphics
+    debugImplementation libraries.composeTooling
+    implementation libraries.composeUiGraphics
+    implementation libraries.composeUiPreview
+    implementation libraries.composeMaterial3
+    implementation libraries.coilCompose
+    implementation libraries.lottieCompose
+    implementation libraries.composeRuntime
+    implementation libraries.lottieCompose
+
+    gmsImplementation "com.upax.zeus.nuevo.android.sdk:chatsdk-gms:1.10.2"
+    hmsImplementation "com.upax.zeus.nuevo.android.sdk:chatsdk-hms:1.10.2"
+    gmsImplementation zeusLibraryGms.zcommonutils
+    hmsImplementation zeusLibraryHms.zcommonutils
+    implementation libraries.waveformSeekBar
+    implementation platform("${libraries.firebaseBom}")
+    implementation libraries.firebaseFirestoreKtx
+    implementation libraries.firebaseStorageKtx
 }

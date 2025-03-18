@@ -1,0 +1,128 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
+    id 'org.jetbrains.kotlin.plugin.compose'
+}
+
+apply from: "$rootProject.projectDir/buildsystem/config.gradle"
+apply from: "$rootProject.projectDir/buildsystem/flavorsbuild.gradle"
+apply from: "$rootProject.projectDir/buildsystem/basedependencies.gradle"
+apply from: "$rootProject.projectDir/buildsystem/library.gradle"
+
+android {
+    namespace configuration.sdknamespace
+    compileSdk configuration.compileSdk
+
+    defaultConfig {
+        minSdk configuration.minSdk
+        targetSdk configuration.targetSdk
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+
+    libraryVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            outputFileName = "${project.getName()}-${version}-${variant.name}.aar"
+        }
+    }
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = classpathBase.kotlinCompiler
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    /**
+     * Room config to export db schemas
+     */
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+                arguments["room.incremental"] = "true"
+            }
+        }
+    }
+    sourceSets {
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+    }
+    ksp {
+        arg("room.schemaLocation", "$projectDir/schemas".toString())
+    }
+    packagingOptions {
+        pickFirst "META-INF/proguard/androidx-annotations.pro"
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+    }
+
+}
+
+dependencies {
+
+    // GMS zeus dependencies
+    gmsImplementation libraries.googleLocation
+    // HMS zeus dependencies
+    hmsImplementation libraries.hmsConnect
+    hmsImplementation libraries.hmsLocation
+
+    //Compose
+    implementation platform("${libraries.composeBom}")
+    implementation libraries.composeUi
+    implementation libraries.activityCompose
+    debugImplementation libraries.composeTooling
+    implementation libraries.composeUiGraphics
+    implementation libraries.composeUiPreview
+    implementation libraries.composeMaterial3
+    implementation libraries.coilCompose
+    implementation libraries.lottieCompose
+    implementation libraries.composeRuntime
+
+    //QR FIXME: move to libraries file
+    implementation libraries.qrose
+    implementation libraries.codeScanner
+
+    //Test
+    testImplementation libraries.coroutinesTest
+    testImplementation libraries.turbine
+    testImplementation libraries.testCore
+    testImplementation libraries.robolectric
+    testImplementation libraries.mockWebServer
+    androidTestImplementation libraries.testRules
+    androidTestImplementation libraries.mockWebServer
+    androidTestImplementation libraries.espressoIdlingResource
+    androidTestImplementation libraries.junitKtx
+    androidTestImplementation libraries.fragmentTesting
+    androidTestImplementation libraries.fragmentTestingManifest
+    androidTestImplementation libraries.composeUiTest
+    androidTestImplementation libraries.roomTest
+
+}

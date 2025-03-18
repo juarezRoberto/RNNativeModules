@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/zemt_main_graph"
+    app:startDestination="@id/ZEMTMenuTalentFragment">
+
+    <fragment
+        android:id="@+id/ZEMTHomeDiscoverFragment"
+        android:name="com.upax.zemytalents.ui.modules.discover.home.ZEMTHomeDiscoverFragment"
+        android:label="ZEMTHomeDiscoverFragment">
+        <action
+            android:id="@+id/action_ZEMTHomeDiscoverFragment_to_ZEMTSurveyDiscoverFragment"
+            app:destination="@id/ZEMTSurveyDiscoverFragment" />
+        <action
+            android:id="@+id/action_ZEMTHomeDiscoverFragment_to_ZEMTMenuTalentFragment"
+            app:destination="@id/ZEMTMenuTalentFragment"
+            app:popUpTo="@id/zemt_main_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTIntroductionFragment"
+        android:name="com.upax.zemytalents.ui.introduction.ZEMTIntroductionFragment"
+        android:label="ZEMTIntroductionFragment">
+        <action
+            android:id="@+id/action_ZEMTIntroductionFragment_to_ZEMTAdviceFragment"
+            app:destination="@id/ZEMTAdviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTSurveyDiscoverFragment"
+        android:name="com.upax.zemytalents.ui.modules.discover.survey.ZEMTSurveyDiscoverFragment"
+        android:label="ZEMTDiscoverFragment">
+        <action
+            android:id="@+id/action_ZEMTSurveyDiscoverFragment_to_ZEMTHomeConfirmFragment"
+            app:destination="@id/ZEMTHomeConfirmFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTTutorialFragment"
+        android:name="com.upax.zemytalents.ui.tutorial.ZEMTTutorialFragment"
+        android:label="ZEMTTutorialFragment" />
+    <fragment
+        android:id="@+id/ZEMTAdviceFragment"
+        android:name="com.upax.zemytalents.ui.advice.ZEMTAdviceFragment"
+        android:label="ZEMTAdviceFragment">
+        <action
+            android:id="@+id/action_ZEMTAdviceFragment_to_ZEMTHomeDiscoverFragment"
+            app:destination="@id/ZEMTHomeDiscoverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTHomeApplyFragment"
+        android:name="com.upax.zemytalents.ui.modules.apply.home.ZEMTHomeApplyFragment"
+        android:label="ZEMTHomeApplyFragment">
+        <action
+            android:id="@+id/action_ZEMTHomeApplyFragment_to_ZEMTSurveyApplyFragment"
+            app:destination="@id/ZEMTSurveyApplyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTHomeConfirmFragment"
+        android:name="com.upax.zemytalents.ui.modules.confirm.home.ZEMTHomeConfirmFragment"
+        android:label="ZEMTHomeConfirmFragment">
+        <action
+            android:id="@+id/navigateToConfirmSurveyFragment"
+            app:destination="@id/ZEMTConfirmSurveyFragment" />
+        <argument
+            android:name="fromDiscoverSurvey"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTMenuTalentFragment"
+        android:name="com.upax.zemytalents.ui.talentmenu.ZEMTMenuTalentFragment"
+        android:label="ZEMTMenuTalentFragment">
+        <action
+            android:id="@+id/goToCollaboratorsFragment"
+            app:destination="@id/ZEMTCollaboratorsFragment" />
+        <action
+            android:id="@+id/navigateToStartFragment"
+            app:destination="@id/ZEMTStartFragment" />
+        <action
+            android:id="@+id/goToConversationOnboarding"
+            app:destination="@id/ZEMTConversationOnboardingFragment" />
+        <action
+            android:id="@+id/goToConversationTypes"
+            app:destination="@id/ZEMTConversationTypes" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTCollaboratorsFragment"
+        android:name="com.upax.zemytalents.ui.conversations.collaboratorlist.ZEMTCollaboratorListFragment"
+        android:label="ZEMTCollaboratorsFragment">
+        <action
+            android:id="@+id/goToCollaboratorDetailFragment"
+            app:destination="@id/ZEMTCollaboratorDetailFragment" />
+        <argument
+            android:name="viewType"
+            android:defaultValue="TALENTS"
+            app:argType="com.upax.zemytalents.ui.conversations.collaboratorlist.model.ZEMTCollaboratorListViewType" />
+        <action
+            android:id="@+id/goToMakeConversation"
+            app:destination="@id/ZEMTMakeConversationFragment" />
+        <action
+            android:id="@+id/action_ZEMTCollaboratorsFragment_to_ZEMTSearcherFragment"
+            app:destination="@id/ZEMTSearcherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTStartFragment"
+        android:name="com.upax.zemytalents.ui.start.ZEMTStartFragment"
+        android:label="ZEMTStartFragment">
+        <action
+            android:id="@+id/navigateToIntroductionFragment"
+            app:destination="@id/ZEMTIntroductionFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+        <action
+            android:id="@+id/navigateToConfirmFragment"
+            app:destination="@id/ZEMTHomeConfirmFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+        <action
+            android:id="@+id/navigateToApplyFragment"
+            app:destination="@id/ZEMTHomeApplyFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+        <action
+            android:id="@+id/navigateToDiscoverFragment"
+            app:destination="@id/ZEMTHomeDiscoverFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+        <action
+            android:id="@+id/action_ZEMTStartFragment_to_ZEMTPreviewMyTalentsFragment"
+            app:destination="@id/ZEMTPreviewMyTalentsFragment" />
+        <action
+            android:id="@+id/fromStartGoToTalentsResume"
+            app:destination="@id/ZEMTTalentsResumeFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+        <argument
+            android:name="collaboratorName"
+            app:argType="string" />
+        <argument
+            android:name="collaboratorId"
+            app:argType="string" />
+        <argument
+            android:name="collaboratorProfileUrl"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ZEMTCollaboratorDetailFragment"
+        android:name="com.upax.zemytalents.ui.conversations.collaboratordetail.ZEMTCollaboratorDetailFragment"
+        android:label="ZEMTCollaboratorDetailFragment">
+        <argument
+            android:name="collaboratorId"
+            app:argType="string" />
+        <argument
+            android:name="collaboratorName"
+            app:argType="string" />
+        <action
+            android:id="@+id/goToConversation"
+            app:destination="@id/ZEMTConversationFragment" />
+        <action
+            android:id="@+id/goToTalentsResume"
+            app:destination="@id/ZEMTTalentsResumeFragment" />
+        <argument
+            android:name="collaboratorProfileImageUrl"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTConversationFragment"
+        android:name="com.upax.zemytalents.ui.conversations.conversationhistory.ZEMTConversationHistoryFragment"
+        android:label="ZEMTConversationFragment">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="subtitle"
+            app:argType="string" />
+        <argument
+            android:name="collaboratorId"
+            app:argType="string" />
+        <argument
+            android:name="bossId"
+            app:argType="string" />
+        <argument android:name="conversationId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTConfirmSurveyFragment"
+        android:name="com.upax.zemytalents.ui.modules.confirm.survey.ZEMTSurveyConfirmFragment"
+        android:label="ZEMTConfirmSurveyFragment">
+        <action
+            android:id="@+id/action_ZEMTConfirmSurveyFragment_to_ZEMTHomeApplyFragment"
+            app:destination="@id/ZEMTHomeApplyFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+        <argument
+            android:name="homeTalents"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTTalentsResumeFragment"
+        android:name="com.upax.zemytalents.ui.conversations.talentsresume.ZEMTTalentsResumeFragment"
+        android:label="ZEMTTalentsResumeFragment">
+        <argument
+            android:name="collaboratorName"
+            app:argType="string" />
+        <argument android:name="collaboratorId" />
+        <argument
+            android:name="collaboratorProfileImageUrl"
+            app:argType="string" />
+        <argument
+            android:name="viewType"
+            app:argType="com.upax.zemytalents.ui.conversations.talentsresume.model.ZEMTTalentsResumeType" />
+        <action
+            android:id="@+id/fromTalentsResumeGoToConversationHistory"
+            app:destination="@id/ZEMTConversationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTMakeConversationFragment"
+        android:name="com.upax.zemytalents.ui.conversations.makeconversation.ZEMTMakeConversationFragment"
+        android:label="ZEMTMakeConversationFragment">
+        <argument
+            android:name="collaboratorName"
+            app:argType="string" />
+        <argument
+            android:name="collaboratorId"
+            app:argType="string" />
+        <action
+            android:id="@+id/fromMakeConversationGoToQRLector"
+            app:destination="@id/ZEMTQrLectorFragment" />
+        <action
+            android:id="@+id/fromMakeConversationToConversationSaved"
+            app:destination="@id/ZEMTConversationSavedFragment"
+            app:popUpTo="@id/ZEMTCollaboratorsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTConversationOnboardingFragment"
+        android:name="com.upax.zemytalents.ui.conversations.onboarding.ZEMTConversationOnboardingFragment"
+        android:label="ZEMTConversationOnboardingFragment">
+        <action
+            android:id="@+id/goToCollaboratorList"
+            app:destination="@id/ZEMTCollaboratorsFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTSurveyApplyFragment"
+        android:name="com.upax.zemytalents.ui.modules.apply.survey.ZEMTSurveyApplyFragment"
+        android:label="ZEMTSurveyApplyFragment">
+        <action
+            android:id="@+id/action_ZEMTSurveyApplyFragment_to_ZEMTPreviewMyTalentsFragment"
+            app:destination="@id/ZEMTPreviewMyTalentsFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTConversationTypes"
+        android:name="com.upax.zemytalents.ui.conversations.conversationtypes.ZEMTConversationTypesFragment"
+        android:label="ZEMTConversationTypes" />
+    <fragment
+        android:id="@+id/ZEMTMyTalentsFragment"
+        android:name="com.upax.zemytalents.ui.mytalents.ZEMTMyTalentsFragment"
+        android:label="ZEMTMyTalentsFragment" />
+    <fragment
+        android:id="@+id/ZEMTPreviewMyTalentsFragment"
+        android:name="com.upax.zemytalents.ui.mytalents.preview.ZEMTPreviewMyTalentsFragment"
+        android:label="ZEMTPreviewMyTalentsFragment">
+        <argument
+            android:name="finalTalents"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_ZEMTPreviewMyTalentsFragment_to_ZEMTTalentsResumeFragment"
+            app:destination="@id/ZEMTTalentsResumeFragment"
+            app:popUpTo="@id/ZEMTMenuTalentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ZEMTQrLectorFragment"
+        android:name="com.upax.zemytalents.ui.conversations.qrscanner.ZEMTQrScannerFragment"
+        android:label="ZEMTQrLectorFragment" />
+    <fragment
+        android:id="@+id/ZEMTConversationSavedFragment"
+        android:name="com.upax.zemytalents.ui.conversations.ZEMTConversationSavedFragment"
+        android:label="ZEMTConversationSavedFragment" />
+    <fragment
+        android:id="@+id/ZEMTSearcherFragment"
+        android:name="com.upax.zemytalents.ui.conversations.collaboratorsearcher.ZEMTCollaboratorSearcherFragment"
+        android:label="ZEMTSearcherFragment" >
+        <argument
+            android:name="viewType"
+            android:defaultValue="TALENTS"
+            app:argType="com.upax.zemytalents.ui.conversations.collaboratorlist.model.ZEMTCollaboratorListViewType" />
+        <action
+            android:id="@+id/action_ZEMTSearcherFragment_to_ZEMTCollaboratorDetailFragment"
+            app:destination="@id/ZEMTCollaboratorDetailFragment" />
+        <action
+            android:id="@+id/action_ZEMTSearcherFragment_to_ZEMTMakeConversationFragment"
+            app:destination="@id/ZEMTMakeConversationFragment" />
+    </fragment>
+</navigation>

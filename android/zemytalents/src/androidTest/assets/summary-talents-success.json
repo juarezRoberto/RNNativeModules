@@ -1,0 +1,154 @@
+{
+  "data": {
+    "talents": {
+      "dominant": [
+        {
+          "attachments": [
+            {
+              "description": "MT-Competidor",
+              "name": "MT-Competidor",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Competidor.json"
+            }
+          ],
+          "description": "Expresa una serie de capacidades innatas para lograr lo que te propongas. El triunfo lo es todo para ti. La necesidad de elevarte como ganador te lleva constantemente a compararte con los demás, con su desempeño, con cualquier indicio que te permita ubicarte y saber en qué lugar estás.\n\nCuando no tienes información acerca de tu ubicación, inmediatamente algo se enciende hacia la búsqueda de una solución que te lleve al primer lugar.",
+          "id": 5,
+          "name": "Competidor"
+        },
+        {
+          "attachments": [
+            {
+              "description": "MT-Articulador",
+              "name": "MT-Articulador",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Articulador.json"
+            }
+          ],
+          "description": "Es una predisposición natural que tú posees para reconstruir \"cómo fue que llegamos aquí\", y que te lleva a explicar el pasado a través de eventos, datos, personas y situaciones que en conjunto explican la historia.\n\nSabes encontrar vínculos en el pasado que explican nuestro presente.",
+          "id": 8,
+          "name": "Articulador"
+        },
+        {
+          "attachments": [
+            {
+              "description": "MT-Conquistador",
+              "name": "MT-Conquistador",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Conquistador.json"
+            }
+          ],
+          "description": "Expresa una predisposición natural hacia el trabajo. Te dedicas a largas horas en cada jornada y no es raro que cada semana te llenes con más horas de trabajo de las normales.\n\nSientes la necesidad de sentirte ocupado y esa exigencia te lleva a trabajar mucho más que los demás, inclusive durante los fines de semana.\n\nCada día empieza desde cero y hay que llenarlo de contenido con logros, aunque sean pequeños, pero que te dejen satisfecho con haber realizado y obtenido resultados concretos, visibles y valiosos.",
+          "id": 13,
+          "name": "Conquistador"
+        },
+        {
+          "attachments": [
+            {
+              "description": "MT-Examinador",
+              "name": "MT-Examinador",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Examinador.json"
+            }
+          ],
+          "description": "Muestra tus habilidades hacia el cuestionamiento. En tu mente las cosas suceden por alguna razón y es necesario conocer con exactitud cuál es la causa de lo que sucede, verificar que la información sea precisa y verdadera, para asegurar que las cosas \"cuadren\".\n\nTienes el don de notar inconsistencias en datos y presentaciones, los cuales deben ser corregidos con precisión para que tengan sustento.",
+          "id": 1,
+          "name": "Examinador"
+        },
+        {
+          "attachments": [
+            {
+              "description": "MT-Encanto",
+              "name": "MT-Encanto",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Encanto.json"
+            }
+          ],
+          "description": "Muestra que tú tienes habilidades para iniciar rápidamente relaciones con personas desconocidas, para \"romper el hielo\" y conocer a los demás fácilmente, para transformar un encuentro casual en un contacto real y valioso, para múltiples fines, tanto de amistad como para eventuales oportunidades de negocio.\n\nNunca te quedas sin palabras. Un saludo, un acercamiento, un \"hola\" salen de tu boca con facilidad. \n\nTe gusta ganarte a los demás y disfrutas cada nuevo encuentro. Para ti no hay desconocidos, sino personas por conocer.",
+          "id": 4,
+          "name": "Encanto"
+        }
+      ],
+      "non_dominant": [
+        {
+          "attachments": [
+            {
+              "description": "MT-Conviccion",
+              "name": "MT-Conviccion",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Conviccion.json"
+            }
+          ],
+          "description": "Expresa naturalmente valores y principios. Eres una persona que te guías por una misión y sientes la necesidad de vincularte a principios éticos y morales porque estos le dan significado a tu vida. \n\nSabes que estamos en este mundo por una razón y que cada día, cada momento, puede ser aprovechado para mostrar fidelidad a tu misión. \n\nEres alguien que se sacrifica por los demás. \nPara ti, compartir es algo importante, que habla acerca de quién eres tú. Sientes que cada momento es una oportunidad para agradecer que podemos hacer una diferencia en nuestras vidas.",
+          "id": 9,
+          "name": "Convicción"
+        },
+        {
+          "attachments": [
+            {
+              "description": "MT-Comprension",
+              "name": "MT-Comprension",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Comprension.json"
+            }
+          ],
+          "description": "Es la habilidad que tú posees para sentir lo que sienten los demás. Sabes escuchar y hacer buenas preguntas, aquellas que se refieren a lo más importante: los sentimientos de una persona.\n\nTú posees la capacidad innata de diferenciar muchos estados emocionales.",
+          "id": 12,
+          "name": "Comprensión"
+        },
+        {
+          "attachments": [
+            {
+              "description": "MT-Actualizador",
+              "name": "MT-Actualizador",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Actualizador.json"
+            }
+          ],
+          "description": "Expresa una serie de capacidades innatas que tú posees para mantenerte al día de cualquier información o conocimiento que pueda mantenerte actualizado sobre un tema de tu interés.\n\nSabes que aprender te enriquece como persona. Te enorgullece compartir tus conocimientos con los demás.",
+          "id": 16,
+          "name": "Actualizador"
+        },
+        {
+          "attachments": [
+            {
+              "description": "MT-Calidad",
+              "name": "MT-Calidad",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Calidad.json"
+            }
+          ],
+          "description": "Forma una serie de predisposiciones que te impulsan a llegar a lo más alto, a siempre buscar lo mejor, que no se conforma con menos, cuando sabes que puedes lograr más.\n\nCanalizas tus esfuerzos para lograr la excelencia en tu vida.  Es vital orientarte hacia lo mejor.",
+          "id": 17,
+          "name": "Calidad"
+        },
+        {
+          "attachments": [
+            {
+              "description": "MT-Incluyente",
+              "name": "MT-Incluyente",
+              "order": 1,
+              "type": 3,
+              "url": "https://files.talentozeus-dev.com.mx/Utilerias/Conversaciones/talentos-lotties/MT+-+Incluyente.json"
+            }
+          ],
+          "description": "Es una serie de capacidades naturales que tú posees para nunca dejar fuera a nadie. Se expresa en un sentido de pertenencia que tú les das a las personas a través del trato y relación con ellos.\n\nTú los haces sentir parte de un grupo, de tu grupo. Sientes que cada persona debe ser incluida, que todos deben pertenecer.",
+          "id": 20,
+          "name": "Incluyente"
+        }
+      ]
+    }
+  },
+  "httpCode": 200,
+  "message": "The request was successful and the server returned the requested data.",
+  "requestId": "041fea4b-b1e5-4ca1-b6ba-85685aba35b5",
+  "status": "SUCCESS"
+}

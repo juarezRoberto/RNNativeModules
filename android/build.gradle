@@ -1,4 +1,8 @@
 buildscript {
+
+    apply from: "$rootProject.projectDir/buildsystem/libversion.gradle"
+    apply from: "$rootProject.projectDir/buildsystem/config.gradle"
+
     ext {
         buildToolsVersion = "35.0.0"
         minSdkVersion = 24
@@ -10,11 +14,53 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
+//        if (getGradle().getStartParameter().getTaskRequests().toString().contains("hms")) {
+//            maven { url "https://developer.huawei.com/repo/" }
+//        }
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+//        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+
+
+//        classpath("com.android.tools.build:gradle:$classpathBase.androidGradlePlugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$classpathBase.kotlin")
+        classpath("org.jfrog.buildinfo:build-info-extractor-gradle:$classpathBase.jFrogExtractor")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.8.5")
+        classpath("com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin:2.1.0-1.0.29")
+        classpath("org.jetbrains.kotlin:compose-compiler-gradle-plugin:2.1.0")
+//        if (getGradle().getStartParameter().getTaskRequests().toString().contains("hms")) {
+//            classpath("com.huawei.agconnect:agcp:$classpathBase.agConnectAgcp")
+//        }
+    }
+}
+
+allprojects {
+    apply plugin: 'com.jfrog.artifactory'
+    apply plugin: 'maven-publish'
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://jitpack.io" }
+        maven {
+            setUrl("${artifactory_url}")
+            credentials {
+                username = "${artifactory_user}"
+                password = "${artifactory_password}"
+            }
+        }
+        maven {
+            setUrl("${artifactory_url_new}")
+            credentials {
+                username = "${artifactory_user_new}"
+                password = "${artifactory_password_new}"
+            }
+        }
+
+        maven { url 'https://developer.huawei.com/repo/' }
     }
 }
 

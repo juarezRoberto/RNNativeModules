@@ -1,0 +1,167 @@
+ext {
+
+    classpathBase = [
+            kotlin             : "2.1.0",
+            androidGradlePlugin: "8.7.0",
+            googleService      : "4.4.1",
+            firebaseCrashlytics: "2.9.9",
+            jFrogExtractor     : "4.33.1",
+            mapsPlatformSecrets: "2.0.0",
+            agConnectAgcp      : "1.9.0.300",
+            safeArgs           : "2.8.5",
+            hilt               : "2.54",
+            kspdevtools        : "2.1.0-1.0.29",
+    ]
+
+    versions = [
+            androidxAppCompat        : "1.7.0",
+            androidxConstraint       : "2.2.0",
+            androidxCore             : "1.15.0",
+            androidxCoreKtx          : "1.15.0",
+            androidMaterial          : "1.12.0",
+            androidxMultidex         : "2.0.1",
+            activityKtx              : "1.9.3",
+            fragmentKtx              : "1.8.5",
+            lifecycleRuntime         : "2.8.7",
+            lifecycleViewModel       : "2.8.7",
+            lifecycleLiveData        : "2.8.7",
+            navigationFragmentKtx    : "2.8.5",
+            navigationUi             : "2.8.5",
+            recyclerView             : "1.3.2",
+            viewpager2               : "1.1.0",
+            paging3                  : "3.3.5",
+            swipeRefreshLayout       : "1.1.0",
+            androidxExifInterface    : "1.3.7",
+            androidxSplashScreen     : "1.0.1",
+            javaBackwardApiCompat    : "2.1.3",
+
+            hilt                     : "2.54",
+            hiltCompiler             : "2.54",
+            dagger                   : "2.54",
+            daggerAndroidLib         : "2.54",
+            daggerCompiler           : "2.54",
+
+            firebaseBom              : "33.7.0",
+
+            googleAuth               : "21.3.0",
+            googleAuthApiPhone       : "18.1.0",
+            googleLocation           : "21.3.0",
+            googleMaps               : "19.0.0",
+            googleMapsUtils          : "3.8.2",
+            googleMapsUtilsKtx       : "5.1.1",
+            googlePlaces             : "4.1.0",
+
+            hmsConnect               : "1.9.1.304",
+            hmsLocation              : "6.12.0.300",
+            hmsMap                   : "6.11.2.301",
+
+            glide                    : "4.16.0",
+            glideCompiler            : "4.16.0",
+            glideOkHttp3Integration  : "4.16.0",
+            lottie                   : "6.6.2",
+
+            cameraX                  : "1.4.1",
+            mediaRouter              : "1.7.0",
+            waveformSeekBar          : "5.0.2",
+            amplituda                : "2.2.2",
+            isoparser                : "1.1.22",
+            intercom                 : "15.9.0",
+
+            okhttp3                  : "4.12.0",
+            okhttp3UrlConnection     : "4.12.0",
+            retrofit2                : "2.11.0",
+            retrofit2ConverterGson   : "2.9.0",
+            grcp                     : "1.69.0",
+            jsoup                    : "1.18.3",
+            ktor                     : "3.0.3",
+
+            sqlCipher                : "4.5.4",
+            room                     : "2.6.1",
+            roomKtx                  : "2.6.1",
+            roomPaging               : "2.6.1",
+            roomCompiler             : "2.6.1",
+
+            coroutines               : "1.10.1",
+            coroutinesPlayServices   : "1.10.1",
+            concurrentFutures        : "1.2.0",
+            concurrentFuturesKtx     : "1.2.0",
+            guavaAndroid             : "33.4.0-android",
+
+            biometric                : "1.1.0",
+            rootBeer                 : "0.1.0", // removed
+
+            facebookShimmer          : "0.5.0",
+            mpChart                  : "v3.1.0",
+            gson                     : "2.10.1",
+            androidxBrowser          : "1.8.0",
+
+            workRuntime              : "2.9.1",
+            workRuntimeKtx           : "2.9.1",
+
+            codeScanner              : "2.3.2",
+            flexboxForAndroid        : "3.0.0",
+            imageCropper             : "4.6.0",
+            pdfViewer                : "3.2.0-beta.3",
+            vectorDrawable           : "1.2.0",
+            vectorDrawableAnimated   : "1.2.0",
+            androidxDynamicAnimation : "1.0.0",
+
+            exoplayerCore            : "2.19.1",
+            exoplayerHls             : "2.19.1",
+            exoplayerUi              : "2.19.1",
+            exoplayer                : "2.19.1",
+
+            // Compose
+            composeBom               : "2024.12.01",
+            coilCompose              : "2.6.0",
+            constraintCompose        : "1.1.0",
+            androidxConstraintCore   : "1.1.0",
+            glideCompose             : "1.0.0-alpha.1", //FIXME Remove
+            navigationCompose        : "2.8.5",
+            lottieCompose            : "6.6.2",
+            qrose                    : "1.0.1",
+
+            /*
+             * Testing
+             */
+
+            testImplJunit            : "4.13.2",
+            androidxTestJunit        : "1.1.5",
+            androidxTestEspresso     : "3.5.1",
+            mockk                    : "1.13.9",
+            robolectric              : "4.9",
+            testRules                : "1.5.0",
+            mockWebServer            : "4.12.0",
+            junitKtx                 : "1.1.5",
+            turbine                  : "1.1.0",
+            testCore                 : "1.6.1",
+            /*
+             * Legacy libraries
+             */
+            blurry                   : "4.0.0",
+            commonsCodec             : "1.16.1",
+            localBroadcastManager    : "1.1.0",
+            materialCalendarView     : "3.0.0",
+            retrofit2ConverterScalars: "2.9.0",
+            retrofitAdapterRxJava    : "2.11.0",
+            kotlinxDatetime          : "0.2.1",
+
+            /*
+             * Core or utils
+             */
+
+            zcsessionInfo            : "1.6.1",
+            zccommon                 : "1.6.2",
+            zcinterceptor            : "1.11.0",
+            zcservicecoordinator     : "1.4.2",
+            zcdesignsystem           : "2.15.0",
+            zceventcollector         : "1.1.0",
+            keyManager               : "1.4.0",
+            upaxcamera               : "1.1.0",
+
+            zcommon                  : "1.6.2",
+            zcommonutils             : "1.3.0",
+            surveys                  : "1.13.0",
+    ]
+
+}

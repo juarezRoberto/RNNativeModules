@@ -1,0 +1,199 @@
+apply from: "$rootProject.projectDir/buildsystem/libversion.gradle"
+ext {
+
+    libraries = [
+            androidxAppCompat        : "androidx.appcompat:appcompat:$versions.androidxAppCompat",
+            androidxConstraint       : "androidx.constraintlayout:constraintlayout:$versions.androidxConstraint",
+            androidxCore             : "androidx.core:core:$versions.androidxCore",
+            androidxCoreKtx          : "androidx.core:core-ktx:$versions.androidxCore",
+            androidMaterial          : "com.google.android.material:material:$versions.androidMaterial",
+            androidxMultidex         : "androidx.multidex:multidex:$versions.androidxMultidex",
+            activityKtx              : "androidx.activity:activity-ktx:$versions.activityKtx",
+            activityCompose          : "androidx.activity:activity-compose:$versions.activityKtx",
+            fragmentKtx              : "androidx.fragment:fragment-ktx:$versions.fragmentKtx",
+            lifecycleRuntime         : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycleRuntime",
+            lifecycleViewModel       : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleViewModel",
+            lifecycleLiveData        : "androidx.lifecycle:lifecycle-livedata-ktx::$versions.lifecycleLiveData",
+            navigationFragmentKtx    : "androidx.navigation:navigation-fragment-ktx:$versions.navigationFragmentKtx",
+            navigationUi             : "androidx.navigation:navigation-ui-ktx:$versions.navigationUi",
+            recyclerView             : "androidx.recyclerview:recyclerview:$versions.recyclerView",
+            viewpager2               : "androidx.viewpager2:viewpager2:$versions.viewpager2",
+            paging3                  : "androidx.paging:paging-runtime:$versions.paging3",
+            swipeRefreshLayout       : "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swipeRefreshLayout",
+            androidxExifInterface    : "androidx.exifinterface:exifinterface::$versions.androidxExifInterface",
+            androidxSplashScreen     : "androidx.core:core-splashscreen:$versions.androidxSplashScreen",
+            javaBackwardApiCompat    : "com.android.tools:desugar_jdk_libs:$versions.javaBackwardApiCompat",
+
+            hilt                     : "com.google.dagger:hilt-android:$versions.hilt",
+            hiltCompiler             : "com.google.dagger:hilt-compiler:$versions.hilt",
+            dagger                   : "com.google.dagger:dagger:$versions.dagger",
+            daggerAndroidLib         : "com.google.dagger:dagger-android:$versions.dagger",
+            daggerCompiler           : "com.google.dagger:dagger-compiler:$versions.daggerCompiler",
+
+            firebaseBom              : "com.google.firebase:firebase-bom:$versions.firebaseBom",
+            firebaseAuth             : "com.google.firebase:firebase-auth",
+            firebaseAuthKtx          : "com.google.firebase:firebase-auth-ktx",
+            firebaseConfig           : "com.google.firebase:firebase-config",
+            firebaseConfigKtx        : "com.google.firebase:firebase-config-ktx",
+            firebaseCrashlytics      : "com.google.firebase:firebase-crashlytics",
+            firebaseCrashlyticsKtx   : "com.google.firebase:firebase-crashlytics-ktx",
+            firebaseDynamicLinks     : "com.google.firebase:firebase-dynamic-links",
+            firebaseDynamicLinksKtx  : "com.google.firebase:firebase-dynamic-links-ktx",
+            firebaseFirestore        : "com.google.firebase:firebase-firestore",
+            firebaseFirestoreKtx     : "com.google.firebase:firebase-firestore-ktx",
+            firebaseMessaging        : "com.google.firebase:firebase-messaging",
+            firebaseMessagingKtx     : "com.google.firebase:firebase-messaging-ktx",
+            firebaseAnalytics        : "com.google.firebase:firebase-analytics",
+            firebaseAnalyticsKtx     : "com.google.firebase:firebase-analytics-ktx",
+            firebaseStorage          : "com.google.firebase:firebase-storage",
+            firebaseStorageKtx       : "com.google.firebase:firebase-storage-ktx",
+
+            googleAuth               : "com.google.android.gms:play-services-auth:$versions.googleAuth",
+            googleAuthApiPhone       : "com.google.android.gms:play-services-auth-api-phone:$versions.googleAuthApiPhone",
+            googleLocation           : "com.google.android.gms:play-services-location:$versions.googleLocation",
+            googleMaps               : "com.google.android.gms:play-services-maps:$versions.googleMaps",
+            googleMapsUtils          : "com.google.maps.android:android-maps-utils:$versions.googleMapsUtils",
+            googleMapsUtilsKtx       : "com.google.maps.android:maps-utils-ktx:$versions.googleMapsUtilsKtx",
+            googlePlaces             : "com.google.android.libraries.places:places:$versions.googlePlaces",
+
+            hmsConnect               : "com.huawei.agconnect:agconnect-core:$versions.hmsConnect",
+            hmsLocation              : "com.huawei.hms:location:$versions.hmsLocation",
+            hmsMap                   : "com.huawei.hms:maps:$versions.hmsMap",
+
+            glide                    : "com.github.bumptech.glide:glide:$versions.glide",
+            glideCompiler            : "com.github.bumptech.glide:ksp:$versions.glideCompiler",
+            glideOkHttp3Integration  : "com.github.bumptech.glide:okhttp3-integration:$versions.glideOkHttp3Integration",
+            lottie                   : "com.airbnb.android:lottie:$versions.lottie",
+            androidxMedia3           : "androidx.media3:media3-session:$versions.androidxMedia3",
+            cameraCore               : "androidx.camera:camera-core:$versions.cameraX",
+            camera2                  : "androidx.camera:camera-camera2:$versions.cameraX",
+            cameraLifecycle          : "androidx.camera:camera-lifecycle:$versions.cameraX",
+            cameraView               : "androidx.camera:camera-view:$versions.cameraX",
+            cameraExtensions         : "androidx.camera:camera-extensions:$versions.cameraX",
+            cameraVideo              : "androidx.camera:camera-video:$versions.cameraX",
+            mediaRouter              : "androidx.mediarouter:mediarouter:$versions.mediaRouter",
+            waveformSeekBar          : "com.github.massoudss:waveformSeekBar:$versions.waveformSeekBar",
+            amplituda                : "com.github.lincollincol:amplituda:$versions.amplituda",
+            isoparser                : "com.googlecode.mp4parser:isoparser:$versions.isoparser",
+            intercom                 : "io.intercom.android:intercom-sdk:$versions.intercom",
+
+            okhttp3                  : "com.squareup.okhttp3:okhttp:$versions.okhttp3",
+            okhttp3UrlConnection     : "com.squareup.okhttp3:okhttp-urlconnection:$versions.okhttp3UrlConnection",
+            retrofit2                : "com.squareup.retrofit2:retrofit:$versions.retrofit2",
+            retrofit2ConverterGson   : "com.squareup.retrofit2:converter-gson:$versions.retrofit2ConverterGson",
+            grcp                     : "io.grpc:grpc-okhttp:$versions.grcp",
+            jsoup                    : "org.jsoup:jsoup:$versions.jsoup",
+            ktorCore                 : "io.ktor:ktor-client-core:$versions.ktor",
+            ktorClient               : "io.ktor:ktor-client-cio:$versions.ktor",
+
+            sqlCipher                : "net.zetetic:android-database-sqlcipher:$versions.sqlCipher",
+            room                     : "androidx.room:room-runtime:$versions.room",
+            roomKtx                  : "androidx.room:room-ktx:$versions.room",
+            roomPaging               : "androidx.room:room-paging:$versions.roomPaging",
+            roomCompiler             : "androidx.room:room-compiler:$versions.roomCompiler",
+
+            coroutines               : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
+            coroutinesPlayServices   : "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$versions.coroutinesPlayServices",
+            concurrentFutures        : "androidx.concurrent:concurrent-futures:$versions.concurrentFutures",
+            concurrentFuturesKtx     : "androidx.concurrent:concurrent-futures-ktx:$versions.concurrentFutures",
+            guavaAndroid             : "com.google.guava:guava:$versions.guavaAndroid",
+
+            biometric                : "androidx.biometric:biometric:$versions.biometric",
+            rootBeer                 : "com.scottyab:rootbeer-lib:$versions.rootBeer",
+
+            facebookShimmer          : "com.facebook.shimmer:shimmer:$versions.facebookShimmer",
+            mpChart                  : "com.github.PhilJay:MPAndroidChart:$versions.mpChart",
+            gson                     : "com.google.code.gson:gson:$versions.gson",
+            androidxBrowser          : "androidx.browser:browser:$versions.androidxBrowser",
+
+            workRuntime              : "androidx.work:work-runtime:$versions.workRuntime",
+            workRuntimeKtx           : "androidx.work:work-runtime-ktx:$versions.workRuntimeKtx",
+
+            codeScanner              : "com.github.yuriy-budiyev:code-scanner:$versions.codeScanner",
+            flexboxForAndroid        : "com.google.android.flexbox:flexbox:$versions.flexboxForAndroid",
+            imageCropper             : "com.vanniktech:android-image-cropper:$versions.imageCropper",
+            pdfViewer                : "com.github.mhiew:android-pdf-viewer:$versions.pdfViewer",
+            vectorDrawableAnimated   : "androidx.vectordrawable:vectordrawable-animated:$versions.vectorDrawableAnimated",
+            vectorDrawable           : "androidx.vectordrawable:vectordrawable:$versions.vectorDrawable",
+            androidxDynamicAnimation : "androidx.dynamicanimation:dynamicanimation:$versions.androidxDynamicAnimation",
+
+            exoplayerCore            : "com.google.android.exoplayer:exoplayer-core:$versions.exoplayerCore",
+            exoplayerHls             : "com.google.android.exoplayer:exoplayer-hls:$versions.exoplayerHls",
+            exoplayerUi              : "com.google.android.exoplayer:exoplayer-ui:$versions.exoplayerUi",
+            exoplayer                : "com.google.android.exoplayer:exoplayer:$versions.exoplayer",
+
+            // Compose
+            composeBom               : "androidx.compose:compose-bom:$versions.composeBom",
+            composeUi                : "androidx.compose.ui:ui",
+            composeUiGraphics        : "androidx.compose.ui:ui-graphics",
+            composeUiPreview         : "androidx.compose.ui:ui-tooling-preview",
+            composeMaterial3         : "androidx.compose.material3:material3",
+            composeTestJunit4        : "androidx.compose.ui:ui-test-junit4",
+            composeTooling           : "androidx.compose.ui:ui-tooling",
+            composeTestManifest      : "androidx.compose.ui:ui-test-manifest",
+            coilCompose              : "io.coil-kt:coil-compose:$versions.coilCompose",
+            constraintCompose        : "androidx.constraintlayout:constraintlayout-compose:$versions.constraintCompose",
+            androidxConstraintCore   : "androidx.constraintlayout:constraintlayout-core:$versions.androidxConstraintCore",
+            glideCompose             : "com.github.bumptech.glide:compose:$versions.glideCompose",
+            navigationCompose        : "androidx.navigation:navigation-compose:$versions.navigationCompose",
+            lottieCompose            : "com.airbnb.android:lottie-compose:$versions.lottieCompose",
+            composeRuntime           : "androidx.lifecycle:lifecycle-runtime-compose:$versions.lifecycleRuntime",
+            qrose                    : "io.github.alexzhirkevich:qrose:$versions.qrose",
+            // Testing
+            testImplJunit            : "junit:junit:$versions.testImplJunit",
+            androidxTestJunit        : "androidx.test.ext:junit:$versions.androidxTestJunit",
+            androidxTestEspresso     : "androidx.test.espresso:espresso-core:$versions.androidxTestEspresso",
+            mockk                    : "io.mockk:mockk:$versions.mockk",
+            robolectric              : "org.robolectric:robolectric:$versions.robolectric",
+            coroutinesTest           : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines",
+            turbine                  : "app.cash.turbine:turbine:$versions.turbine",
+            testCore                 : "androidx.test:core:$versions.testCore",
+            mockWebServer            : "com.squareup.okhttp3:mockwebserver:$versions.mockWebServer",
+            testRules                : "androidx.test:rules:$versions.testRules",
+            espressoIdlingResource   : "androidx.test.espresso:espresso-idling-resource:$versions.espressoIdlingResource",
+            junitKtx                 : "androidx.test.ext:junit-ktx:$versions.junitKtx",
+            fragmentTesting          : "androidx.fragment:fragment-testing:$versions.fragmentTesting",
+            fragmentTestingManifest  : "androidx.fragment:fragment-testing-manifest:$versions.fragmentTesting",
+            composeUiTest            : "androidx.compose.ui:ui-test-junit4-android:$versions.composeUiTest",
+            roomTest            : "androidx.room:room-testing:$versions.room",
+
+            /*
+             * Deprecated dependencies
+             */
+            blurry                   : "jp.wasabeef:blurry:$versions.blurry",
+            commonsCodec             : "commons-codec:commons-codec:$versions.commonsCodec",
+            localBroadcastManager    : "androidx.localbroadcastmanager:localbroadcastmanager:$versions.localBroadcastManager",
+            materialCalendarView     : "com.github.goemic:material-calendarview:$versions.materialCalendarView",
+            retrofit2ConverterScalars: "com.squareup.retrofit2:converter-scalars:$versions.retrofit2ConverterScalars",
+            kotlinxDatetime          : "org.jetbrains.kotlinx:kotlinx-datetime:$versions.kotlinxDatetime",
+    ]
+
+    zeusLibrary = [
+            // core or utils
+            zcsessioninfo       : "com.upax.zeus.android.sdk:zcsessioninfo:$versions.zcsessionInfo",
+            zccommon            : "com.upax.zeus.android.sdk:zccommon-zeustalent:$versions.zccommon",
+            zcinterceptor       : "com.upax.zeus.android.sdk:zcinterceptor-zeustalent:$versions.zcinterceptor",
+            zcservicecoordinator: "com.upax.zeus.android.sdk:zcservicecoordinator:$versions.zcservicecoordinator",
+            zcdesignsystem      : "com.upax.zeus.android.sdk:zcdesignsystem-zeustalent:$versions.zcdesignsystem",
+            keyManager          : "com.upax.zeus.android.sdk:keyManager:$versions.keyManager",
+            upaxcamera          : "com.upax.zeus.android.sdk:upaxcamera:$versions.upaxcamera",
+            zceventcollector    : "com.upax.zeus.nuevo.android.sdk:zceventcollector:$versions.zceventcollector",
+
+            // Legacy
+            servicecoordinator  : "com.upax.zeus.android.sdk:servicecoordinator:$versions.servicecoordinator",
+            eventscollector     : "com.upax.zeus.android.sdk:eventscollectorsdk:$versions.eventscollector",
+    ]
+
+    zeusLibraryGms = [
+            zcommon     : "com.upax.zeus.android.sdk:zcommon-gms:$versions.zcommon",
+            zcommonutils: "com.upax.zeus.android.sdk:zcommonutils-gms:$versions.zcommonutils",
+            zesurveys   : "com.upax.zeus.nuevo.android.sdk:zesurveys-gms:$versions.surveys",
+    ]
+
+    zeusLibraryHms = [
+            zcommon     : "com.upax.zeus.android.sdk:zcommon-hms:$versions.zcommon",
+            zcommonutils: "com.upax.zeus.android.sdk:zcommonutils-hms:$versions.zcommonutils",
+            zesurveys   : "com.upax.zeus.nuevo.android.sdk:zesurveys-hms:$versions.surveys",
+    ]
+
+}

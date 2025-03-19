@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import org.json.JSONObject
 
 class ZEMTHostActivityViewModel(private val app: Application) : AndroidViewModel(app) {
 
@@ -22,40 +23,55 @@ class ZEMTHostActivityViewModel(private val app: Application) : AndroidViewModel
     val onSuccess = _onSuccess.asStateFlow()
 
 
-    fun configureEnvironment() = viewModelScope.launch {
+    fun configureEnvironment(userJson: String) = viewModelScope.launch {
         Log.e("REACT", "startingServiceCoordinator")
         val authUserUseCase = ZCSCExpose.getAuthenticateUserV2UseCase(app.applicationContext)
-        val result = authUserUseCase("4b1bc2b6-7c97-4de8-a9d9-0f2f9cf519b2", "GrupoSalinas2024")
+        val (zeusId, password) = getCredentials(userJson)
+        val result = authUserUseCase(zeusId, password)
         if (result.success) {
-            loadMockUser()
+            loadMockUser(userJson)
             _onSuccess.update { true }
         } else {
             _onSuccess.update { false }
-//            Toast.makeText(this@ZEMTHostActivity, "Error", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private suspend fun loadMockUser() {
-        val session = ZCSISession(sessionStatus = ZCSISessionStatus.VERIFIED.code)
-        val company = ZCSICompany(
-            companyId = "310",
-            name = "Grupo Nach",
-            primaryColor = "#00C5FF"
-        )
-        val user = ZCSIUser(
-            zeusId = "ba3e85c2-a82e-49b3-90d3-b2740eac2193",
-            employeeNumber = "999956281",
-            name = "David Arturo",
-            lastName = "Martinez",
-            secondLastName = "Guzman",
-            companyIdentifier = company.companyId
-        )
+    private suspend fun loadMockUser(userJson: String) {
+        try {
+            val session = ZCSISession(sessionStatus = ZCSISessionStatus.VERIFIED.code)
+            val userJsonObject = JSONObject(userJson)
+            val companyJsonObject = userJsonObject.getJSONObject("company")
 
-        val sessionInfo = ZCSIExpose.getSessionInfo(app.applicationContext)
-        sessionInfo.saveUser(user)
-        sessionInfo.saveCompany(user.zeusId, company)
-        sessionInfo.saveSession(user.zeusId, session)
-        ZCDSApplicationController.setPrimaryColor(company.primaryColor)
+            val company = ZCSICompany(
+                companyId = companyJsonObject.getString("companyId"),
+                name = companyJsonObject.getString("name"),
+                primaryColor = companyJsonObject.getString("primaryColor")
+            )
+            val user = ZCSIUser(
+                zeusId = userJsonObject.getString("zeusId"),
+                employeeNumber = userJsonObject.getString("employeeNumber"),
+                name = userJsonObject.getString("name"),
+                lastName = userJsonObject.getString("lastName"),
+                secondLastName = userJsonObject.getString("secondLastName"),
+                companyIdentifier = company.companyId
+            )
+
+            val sessionInfo = ZCSIExpose.getSessionInfo(app.applicationContext)
+            sessionInfo.saveUser(user)
+            sessionInfo.saveCompany(user.zeusId, company)
+            sessionInfo.saveSession(user.zeusId, session)
+            ZCDSApplicationController.setPrimaryColor(company.primaryColor)
+        } catch (e: Exception) {
+            Log.e("REACT", "MyTalentsModule - failed loadMockUser ${e.message}")
+        }
+    }
+
+    private fun getCredentials(userJson: String): Pair<String, String> {
+        val userJsonObject = JSONObject(userJson)
+        val companyJsonObject = userJsonObject.getJSONObject("credentials")
+        val zeusId = companyJsonObject.getString("zeusId")
+        val password = companyJsonObject.getString("password")
+        return Pair(zeusId, password)
     }
 
 }

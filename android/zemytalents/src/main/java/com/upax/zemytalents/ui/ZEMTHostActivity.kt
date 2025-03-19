@@ -49,7 +49,7 @@ class ZEMTHostActivity : AppCompatActivity() {
                 }
             }
         }
-        viewModel.configureEnvironment()
+        viewModel.configureEnvironment(intent.getStringExtra("JSON").orEmpty())
     }
 
     private fun addStartDestination() {

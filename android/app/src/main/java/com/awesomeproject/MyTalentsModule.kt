@@ -12,9 +12,9 @@ class MyTalentsModule internal constructor(private val context: ReactApplication
     override fun getName(): String = MyTalentsModule::class.java.simpleName
 
     @ReactMethod
-    fun openModule() {
-        Log.e("REACT", "MyTalentsModule - openModule")
-        ZEMTMyTalentsExpose.openModule(context)
+    fun openModule(userJson: String) {
+        Log.e("REACT", "MyTalentsModule - openModule params $userJson")
+        ZEMTMyTalentsExpose.openModule(context, userJson)
     }
 
     @ReactMethod

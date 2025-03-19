@@ -46,7 +46,26 @@ function App(): React.JSX.Element {
   }
 
   const openModule = () => {
-    MyTalentsModule.openModule()
+    const credentials = {
+      zeusId: '4b1bc2b6-7c97-4de8-a9d9-0f2f9cf519b2',
+      password: 'GrupoSalinas2024'
+    }
+    const company = {
+      companyId: '310',
+      name: 'Grupo Nach',
+      primaryColor: '#00C5FF'
+    }
+    const user = {
+      zeusId: 'ba3e85c2-a82e-49b3-90d3-b2740eac2193',
+      employeeNumber: '999956281',
+      name: 'David Arturo',
+      lastName: 'Martinez',
+      secondLastName: 'Guzman',
+      company: company,
+      credentials: credentials
+    }
+    const userJson = JSON.stringify(user)
+    MyTalentsModule.openModule(userJson)
   }
 
   const startServiceCoordinator = () => {
